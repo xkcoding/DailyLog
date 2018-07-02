@@ -1,13 +1,13 @@
 # 基础配置
 server:
   servlet:
-    context-path: /hospital
+    context-path: /blog
   port: 8080
 
 # 日志配置
 logging:
   level:
-    com.mchz.hospital.mapper: debug
+    com.xkcoding.dailylog.mapper: debug
 
 # 数据源配置
 spring:
