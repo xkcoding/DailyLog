@@ -22,19 +22,80 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+		<skipTests>true</skipTests>
+		<mybatis.version>1.3.2</mybatis.version>
+		<mapper.version>2.0.3</mapper.version>
+		<pagehelper.version>1.2.5</pagehelper.version>
+		<mysql.version>8.0.9-rc</mysql.version>
+		<hutool.version>4.1.1</hutool.version>
+		<guava.version>25.1-jre</guava.version>
 	</properties>
 
 	<dependencies>
+		<!--spring boot dependency start-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!--spring boot dependency end-->
+
+		<!--mybatis dependency start-->
+		<dependency>
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-starter</artifactId>
+			<version>${mybatis.version}</version>
+		</dependency>
+		<!--mybatis dependency end-->
+
+		<!--通用 Mapper dependency start-->
+		<dependency>
+			<groupId>tk.mybatis</groupId>
+			<artifactId>mapper-spring-boot-starter</artifactId>
+			<version>${mapper.version}</version>
+		</dependency>
+		<!--通用 Mapper dependency end-->
+
+		<!--PageHelper dependency start-->
+		<dependency>
+			<groupId>com.github.pagehelper</groupId>
+			<artifactId>pagehelper-spring-boot-starter</artifactId>
+			<version>${pagehelper.version}</version>
+		</dependency>
+		<!--PageHelper dependency end-->
+
+		<!--driver dependency start-->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql.version}</version>
+		</dependency>
+		<!--driver dependency end-->
+
+		<!--tool dependency start-->
+		<dependency>
+			<groupId>cn.hutool</groupId>
+			<artifactId>hutool-all</artifactId>
+			<version>${hutool.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>${guava.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
+		<!--tool dependency end-->
 	</dependencies>
 
 	<build>
